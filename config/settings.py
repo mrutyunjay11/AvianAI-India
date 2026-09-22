@@ -17,8 +17,8 @@ SAMPLES_DIR = PROJECT_ROOT / "samples"
 INDIAN_SAMPLES_DIR = SAMPLES_DIR / "indian_birds"
 
 # Model & Label Files
-MODEL_FILENAME = "birdnet-v3.0-preview3.1-fp16-b1.onnx"
-LABELS_FILENAME = "birdnet-v3.0-preview3.1-labels-b1.txt"
+MODEL_FILENAME = "aviannet-v3-gpu-fp16.onnx"
+LABELS_FILENAME = "aviannet-v3-labels.txt"
 REGIONS_FILENAME = "regions.json"
 MODELS_META_FILENAME = "models.json"
 

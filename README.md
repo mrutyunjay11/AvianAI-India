@@ -36,7 +36,7 @@ A high-performance, real-time bioacoustic neural identification system engineere
 ## Key Technical Features
 
 1. **Acoustic Neural Architecture (AvianNet-v3)**:
-   - **Model Checkpoint**: `models/birdnet-v3.0-preview3.1-fp16-b1.onnx` (278 MB).
+   - **Model Checkpoint**: `models/aviannet-v3-gpu-fp16.onnx` (278 MB).
    - **Backbone**: EfficientNetV2-S with native in-graph `Conv1d` framing & windowed DFT log-mel frontend.
    - **Taxonomic Resolution**: 11,560 classes globally with dedicated Indian regional presence masks.
 2. **Indian Geographic Ecozone Filtering**:
@@ -137,8 +137,8 @@ python predict.py --audio samples/indian_birds/01_indian_peafowl.wav --json
 +-- inference/
 |   +-- model.py               # ONNX Runtime inference engine & benchmarking
 +-- models/
-|   +-- birdnet-v3.0-*.onnx    # AvianNet-v3 FP16 ONNX model (278 MB)
-|   +-- birdnet-v3.0-*.txt     # 11,560 labels file
+|   +-- aviannet-v3-*.onnx     # AvianNet-v3 FP16 ONNX model (278 MB)
+|   +-- aviannet-v3-*.txt      # 11,560 classes label catalog
 +-- samples/
 |   +-- indian_birds/          # Test audio samples of iconic Indian species
 |   +-- phone_transfer/        # Sample audio files for mobile testing

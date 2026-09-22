@@ -30,3 +30,4 @@ samples/mic_recording_*.wav
 # Local SSD Bundles & ZIPs
 avian_ai_rtx5090_bundle/
 avian_ai_rtx5090_bundle.zip
+*.ses
