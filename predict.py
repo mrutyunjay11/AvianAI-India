@@ -1,4 +1,4 @@
-"""CLI prediction tool for BirdNET v3.0 India.
+"""CLI prediction tool for AvianAI India.
 
 Supports:
 - Audio file inference: python predict.py --audio samples/indian_birds/01_indian_peafowl.wav
@@ -26,7 +26,7 @@ from audio.microphone import is_microphone_available, record_audio, save_audio
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="BirdNET v3.0 India — Bird Sound Identification CLI",
+        description="AvianAI India - Bioacoustic Sound Identification CLI",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter,
     )
     group = parser.add_mutually_exclusive_group(required=True)

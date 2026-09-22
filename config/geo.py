@@ -1,6 +1,6 @@
-"""Geographic species filtering and range derivation for BirdNET v3.0 India.
+"""Geographic species filtering and range derivation for AvianAI India.
 
-Loads official BirdNET regional metadata (regions.json) and official regional indices
+Loads regional metadata and regional indices
 to filter and prioritize bird species occurring in India and its subregions.
 """
 

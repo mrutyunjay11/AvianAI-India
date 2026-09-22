@@ -1,6 +1,6 @@
-"""Official BirdNET v3.0 Labels Parser and Resolver.
+"""AvianAI India Species Catalog Parser and Resolver.
 
-Parses the 11,560 official classes from BirdNET v3.0 (Scientific name_Common name),
+Parses the 11,560 classes (Scientific name_Common name),
 maps indices to species structures, and handles formatting for UI and CLI.
 """
 

@@ -1,4 +1,4 @@
-"""Audio preprocessing pipeline for BirdNET v3.0.
+"""Audio preprocessing pipeline for AvianAI India.
 
 Loads audio files (WAV, OGG, MP3, FLAC), converts to mono, resamples to 32,000 Hz,
 segments into 5.0-second (160,000 samples) windows with stride, and formats for ONNX inference.

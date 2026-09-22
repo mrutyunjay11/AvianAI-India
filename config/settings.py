@@ -1,4 +1,4 @@
-"""Settings and hardware configuration for BirdNET v3.0 India.
+"""Settings and hardware configuration for AvianAI India.
 
 Provides automatic compute provider selection (CUDA -> CoreML -> CPU),
 default audio parameters (32 kHz, 160k samples), paths, and geographic presets.

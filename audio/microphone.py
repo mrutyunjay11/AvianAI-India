@@ -1,4 +1,4 @@
-"""Microphone recording module for BirdNET v3.0 India.
+"""Microphone recording module for AvianAI India.
 
 Captures real-time audio from local microphone input using sounddevice,
 with fallback options for headless or containerized environments.

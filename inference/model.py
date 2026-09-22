@@ -1,7 +1,7 @@
-"""Inference engine for BirdNET v3.0 India.
+"""Inference engine for AvianAI India.
 
 Loads the GPU-native FP16 ONNX model, manages hardware acceleration (CUDA/CoreML/CPU),
-applies official geographic filtering for India, and generates structured predictions
+applies geographic filtering for India, and generates structured predictions
 with sub-millisecond benchmarking.
 """
 
@@ -56,14 +56,8 @@ class PredictionResult:
     @property
     def display_title(self) -> str:
         if self.is_confident:
-            return self.top_species.common_name or self.top_species.scientific_name
+            return self.top_species.full_display
         return LOW_CONFIDENCE_LABEL
-
-    @property
-    def display_subtitle(self) -> str:
-        if self.is_confident and self.top_species.scientific_name:
-            return self.top_species.scientific_name
-        return ""
 
     def format_summary(self) -> str:
         """Returns clean text summary for CLI or logs."""
@@ -99,7 +93,7 @@ class PredictionResult:
 
 
 class BirdNETClassifier:
-    """High-performance classifier using the BirdNET v3.0 FP16 ONNX model."""
+    """High-performance classifier using the AvianNet-v3 FP16 ONNX model."""
 
     def __init__(
         self,
@@ -127,7 +121,7 @@ class BirdNETClassifier:
         self._load_session()
 
     def _resolve_model_path(self, explicit_path: Optional[Union[str, Path]]) -> Path:
-        """Finds the best available BirdNET v3.0 model file."""
+        """Finds the best available model file."""
         if explicit_path is not None:
             return Path(explicit_path)
 
@@ -154,7 +148,7 @@ class BirdNETClassifier:
         sess_options.intra_op_num_threads = 4
 
         providers = select_execution_providers(force_cpu=self.force_cpu)
-        print(f"[ONNX] Initializing BirdNET v3.0 session with providers: {providers}")
+        print(f"[ONNX] Initializing AvianNet-v3 session with providers: {providers}")
 
         try:
             self.session = ort.InferenceSession(

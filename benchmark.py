@@ -1,4 +1,4 @@
-"""Performance benchmarking for BirdNET v3.0 India.
+"""Performance benchmarking for AvianAI India.
 
 Measures:
 - Model load time & initialization

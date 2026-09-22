@@ -1,11 +1,11 @@
-"""Verification script for BirdNET v3.0 India.
+"""Verification script for AvianAI India.
 
 Verifies:
 1. Model file existence and integrity.
 2. ONNX Runtime session creation and compute hardware (CUDA/CoreML/CPU).
 3. Input tensor specifications ([batch, 160000] @ 32 kHz).
 4. Output tensor shapes (predictions [batch, 11560], embeddings [batch, 1280]).
-5. Official class label alignment (11,560 species).
+5. Class label alignment (11,560 species).
 6. Geographic species derivation and Indian subregion indices.
 7. End-to-end dummy signal inference and real sample audio verification.
 """
@@ -29,9 +29,9 @@ from config.labels import get_label_catalog
 from config.geo import get_geo_filter
 
 
-def verify_birdnet_system() -> bool:
+def verify_system() -> bool:
     print("=" * 68)
-    print(" AvianAI India — System & Model Verification")
+    print(" AvianAI India - System & Model Verification")
     print(" Developed & Engineered by Mrutyunjay Joshi")
     print("=" * 68)
 
@@ -46,15 +46,15 @@ def verify_birdnet_system() -> bool:
     print(f"  -> Labels File: {LABELS_PATH.name}")
 
     # 2. Labels Verification
-    print("\n[Step 2] Verifying Official Label Catalog...")
+    print("\n[Step 2] Verifying Label Catalog...")
     catalog = get_label_catalog(LABELS_PATH)
     total_labels = len(catalog)
-    print(f"  -> Total Official Classes: {total_labels:,}")
+    print(f"  -> Total Classes: {total_labels:,}")
 
     if total_labels != 11560:
-        print(f"[ERROR] Expected 11,560 official classes, but got {total_labels}")
+        print(f"[ERROR] Expected 11,560 classes, but got {total_labels}")
         return False
-    print("  -> [OK] Exact 11,560 official BirdNET v3.0 classes verified.")
+    print("  -> [OK] Exact 11,560 classes verified.")
 
     # Check prominent Indian species in catalog
     test_birds = ["Indian Peafowl", "Indian Roller", "Asian Koel", "Common Kingfisher", "Oriental Magpie-Robin"]
@@ -154,11 +154,11 @@ def verify_birdnet_system() -> bool:
         print("  -> [INFO] No sample WAV files found in samples/indian_birds/ to test.")
 
     print("\n" + "=" * 68)
-    print(" [SUCCESS] All BirdNET v3.0 System Verifications Passed!")
+    print(" [SUCCESS] All AvianAI India System Verifications Passed!")
     print("=" * 68)
     return True
 
 
 if __name__ == "__main__":
-    success = verify_birdnet_system()
+    success = verify_system()
     sys.exit(0 if success else 1)
