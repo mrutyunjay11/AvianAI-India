@@ -1,0 +1,32 @@
+# ==============================================================================
+# AvianAI India — Project Requirements
+# Developer: Mrutyunjay Joshi
+#
+# To install dependencies later in a new virtual environment:
+#   python3 -m venv .venv
+#   source .venv/bin/activate       (Linux / macOS)
+#   .venv\Scripts\activate          (Windows)
+#   pip install --upgrade pip
+#   pip install -r requirements.txt
+#
+# For Linux workstations with NVIDIA RTX 5090 / CUDA:
+#   pip install -r requirements_rtx5090.txt
+# ==============================================================================
+
+# Core Machine Learning Inference (ONNX Runtime)
+onnxruntime>=1.18.0
+
+# Audio Capture, Loading & Signal Processing
+soundfile>=0.12.1
+sounddevice>=0.4.6
+librosa>=0.10.1
+scipy>=1.11.0
+numpy>=1.24.0
+
+# Web Application Interface
+gradio>=4.0.0
+
+# Utilities & Testing
+requests>=2.31.0
+tqdm>=4.66.0
+pytest>=8.0.0

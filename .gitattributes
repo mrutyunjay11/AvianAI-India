@@ -1,0 +1,4 @@
+# Git LFS tracking for large binary assets (>100MB)
+*.onnx filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text
+models/*.onnx filter=lfs diff=lfs merge=lfs -text

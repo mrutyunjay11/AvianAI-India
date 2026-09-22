@@ -1,0 +1,52 @@
+"""Configuration package for BirdNET v3.0 India."""
+
+from .settings import (
+    CONFIDENCE_THRESHOLD,
+    CONFIG_DIR,
+    DEFAULT_LATITUDE,
+    DEFAULT_LONGITUDE,
+    DEFAULT_REGION,
+    DEFAULT_TOP_K,
+    LABELS_PATH,
+    MODEL_NAME,
+    MODEL_PATH,
+    MODELS_DIR,
+    PROJECT_NAME,
+    PROJECT_ROOT,
+    REGIONAL_INDICES,
+    REGIONS_PATH,
+    SAMPLE_RATE,
+    WINDOW_SAMPLES,
+    WINDOW_SECONDS,
+    get_hardware_info,
+    select_execution_providers,
+)
+from .labels import BirdSpecies, LabelCatalog, get_label_catalog
+from .geo import GeoFilter, get_geo_filter
+
+__all__ = [
+    "CONFIDENCE_THRESHOLD",
+    "CONFIG_DIR",
+    "DEFAULT_LATITUDE",
+    "DEFAULT_LONGITUDE",
+    "DEFAULT_REGION",
+    "DEFAULT_TOP_K",
+    "LABELS_PATH",
+    "MODEL_NAME",
+    "MODEL_PATH",
+    "MODELS_DIR",
+    "PROJECT_NAME",
+    "PROJECT_ROOT",
+    "REGIONAL_INDICES",
+    "REGIONS_PATH",
+    "SAMPLE_RATE",
+    "WINDOW_SAMPLES",
+    "WINDOW_SECONDS",
+    "get_hardware_info",
+    "select_execution_providers",
+    "BirdSpecies",
+    "LabelCatalog",
+    "get_label_catalog",
+    "GeoFilter",
+    "get_geo_filter",
+]

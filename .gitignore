@@ -1,0 +1,32 @@
+# ==============================================================================
+# AvianAI India — Git Ignore Rules
+# ==============================================================================
+
+# Virtual Environments
+venv/
+.venv/
+env/
+.env/
+
+# Python Bytecode & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# macOS Metadata
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Temporary Microphone & Testing Files
+samples/mic_recording_*.wav
+
+# Local SSD Bundles & ZIPs
+avian_ai_rtx5090_bundle/
+avian_ai_rtx5090_bundle.zip
